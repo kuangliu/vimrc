@@ -161,7 +161,7 @@ nnoremap <Leader>rg :Rg<CR>
 "=====================================================
 "" Easymotion settings
 "=====================================================
-nmap ss <Plug>(easymotion-s2)
+nmap s <Plug>(easymotion-s2)
 
 "=====================================================
 "" NeoVim terminal settings
@@ -176,17 +176,16 @@ nmap <silent> <Leader>l :wincmd l<CR>
 set splitbelow
 set splitright
 nmap <Leader>q :q!<CR>
-nmap <Leader>x :wq!<CR>
 nmap <Leader>tr :vsplit term://zsh<CR>  " terminal right
 nmap <Leader>tb :split term://zsh<CR>   " terminal below
-nmap <silent> <Leader>th :vertical resize +5<CR>
-nmap <silent> <Leader>tl :vertical resize -5<CR>
+nmap <Leader>th :vertical resize +5<CR>
+nmap <Leader>tl :vertical resize -5<CR>
 vmap <Leader>y "+y
 
 " 切换 buffer
-nnoremap b] :bn<CR> 
-nnoremap b[ :bp<CR> 
-nnoremap bq :<c-u>bp <bar> bd #<cr>          " close current buffer
+nnoremap ]b :bn<CR>
+nnoremap [b :bp<CR>
+nnoremap qb :<c-u>bp <bar> bd #<cr>     " quit current buffer
 
 "=====================================================
 "" Ctags settings
