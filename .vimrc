@@ -174,7 +174,9 @@ nnoremap b] :bn<CR>
 nnoremap b[ :bp<CR> 
 nnoremap bq :<c-u>bp <bar> bd #<cr>          " close current buffer
 
-" Ripgrep
+"=====================================================
+"" Ripgrep settings
+"=====================================================
 if executable('rg')
   let g:rg_derive_root='true'
 endif
@@ -252,7 +254,8 @@ set guifont=Menlo\ Regular:h18
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='badwolf'
+" let g:airline_theme='badwolf'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
