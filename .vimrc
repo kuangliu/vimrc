@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'easymotion/vim-easymotion'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'rhysd/accelerated-jk'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -144,6 +145,11 @@ let mapleader=" "
 "inoremap jj <Esc>
 "inoremap jk <Esc>
 
+"=====================================================
+"" Accelerated-jk settings
+"=====================================================
+nmap <silent> j <Plug>(accelerated_jk_gj)
+nmap <silent> k <Plug>(accelerated_jk_gk)
 
 "=====================================================
 "" FZF settings
