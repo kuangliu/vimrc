@@ -22,11 +22,11 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
     Plug 'scrooloose/nerdtree'                " Project and file navigation
-    Plug 'ctrlpvim/ctrlp.vim'                 " Fast transitions on project files
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'easymotion/vim-easymotion'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'jremmen/vim-ripgrep'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -144,6 +144,14 @@ let mapleader=" "
 "inoremap jj <Esc>
 "inoremap jk <Esc>
 
+
+"=====================================================
+"" FZF settings
+"=====================================================
+" nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+nnoremap <c-p> :Files<CR>
+nnoremap <Leader>rg :Rg<CR>
+
 "=====================================================
 "" Easymotion settings
 "=====================================================
@@ -154,20 +162,20 @@ nmap ss <Plug>(easymotion-s2)
 "=====================================================
 tnoremap <Esc><Esc> <C-\><C-n>     " leave nvim terminal mode
 
-nmap <silent> <leader>h :wincmd h<CR>
-nmap <silent> <leader>j :wincmd j<CR>
-nmap <silent> <leader>k :wincmd k<CR>
-nmap <silent> <leader>l :wincmd l<CR>
+nmap <silent> <Leader>h :wincmd h<CR>
+nmap <silent> <Leader>j :wincmd j<CR>
+nmap <silent> <Leader>k :wincmd k<CR>
+nmap <silent> <Leader>l :wincmd l<CR>
 
 set splitbelow
 set splitright
-nmap <leader>q :q!<CR>
-nmap <leader>x :wq!<CR>
-nmap <leader>tr :vsplit term://zsh<CR>  " terminal right
-nmap <leader>tb :split term://zsh<CR>   " terminal below
-nmap <silent> <leader>th :vertical resize +5<CR>
-nmap <silent> <leader>tl :vertical resize -5<CR>
-vmap <leader>y "+y
+nmap <Leader>q :q!<CR>
+nmap <Leader>x :wq!<CR>
+nmap <Leader>tr :vsplit term://zsh<CR>  " terminal right
+nmap <Leader>tb :split term://zsh<CR>   " terminal below
+nmap <silent> <Leader>th :vertical resize +5<CR>
+nmap <silent> <Leader>tl :vertical resize -5<CR>
+vmap <Leader>y "+y
 
 " 切换 buffer
 nnoremap b] :bn<CR> 
@@ -175,20 +183,12 @@ nnoremap b[ :bp<CR>
 nnoremap bq :<c-u>bp <bar> bd #<cr>          " close current buffer
 
 "=====================================================
-"" Ripgrep settings
-"=====================================================
-if executable('rg')
-  let g:rg_derive_root='true'
-endif
-nnoremap <leader>ps :Rg<SPACE> 
-
-"=====================================================
 "" Ctags settings
 "=====================================================
-"nmap <leader>gd <C-]><CR>
-"nmap <leader>ts :ts<CR>
-"nmap <leader>tn :tn<CR>
-"nmap <leader>tp :tp<CR>
+"nmap <Leader>gd <C-]><CR>
+"nmap <Leader>ts :ts<CR>
+"nmap <Leader>tn :tn<CR>
+"nmap <Leader>tp :tp<CR>
 
 "=====================================================
 "" Coc settings
@@ -232,7 +232,7 @@ set switchbuf=useopen
 set laststatus=2
 nmap <F9> :bprev<CR>
 nmap <F10> :bnext<CR>
-"nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
+"nmap <silent> <Leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 
 "=====================================================
 "" Search settings
@@ -249,7 +249,7 @@ set title                                                         " show file in
 set laststatus=2                                                  " use 2 lines for the status bar
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
 
-set guifont=Menlo\ Regular:h18
+" set guifont=Menlo\ Regular:h18
 
 "=====================================================
 "" AirLine settings
@@ -295,7 +295,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 "" Powerline terminal settings
 "=====================================================
 " set guifont=Inconsolata\ for\ Powerline:h15
-" set guifont=Source\ Code\ Pro\ for\ Powerline:h15
+" " set guifont=Source\ Code\ Pro\ for\ Powerline:h15
 " let g:Powerline_symbols = 'fancy'
 " set encoding=utf-8
 " set t_Co=256
@@ -338,8 +338,8 @@ let NERDTreeDirArrows = 1
 " 过滤: 所有指定文件和文件夹不显示
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']  
 let g:NERDTreeWinPos = "left"
-nmap <leader>f :NERDTreeToggle<CR>  " File explorer
-nmap <leader>nf :NERDTreeFind<CR>   " Nerdtree Find
+nmap <Leader>f :NERDTreeToggle<CR>  " File explorer
+nmap <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
 
 "=====================================================
 "" NERDCommenter settings
