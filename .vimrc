@@ -21,12 +21,11 @@ set nocompatible
 "=====================================================
 call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
-    Plug 'scrooloose/nerdtree'                " Project and file navigation
+    Plug 'preservim/nerdtree'                " Project and file navigation
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'easymotion/vim-easymotion'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'rhysd/accelerated-jk'
 
     "-------------------=== Other ===-------------------------------
@@ -322,7 +321,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
 let NERDTreeWinSize=40
 autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
-" nmap " :NERDTreeToggle<CR>
 autocmd VimEnter * wincmd p
 " let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 " 开启/关闭nerdtree快捷键
@@ -345,6 +343,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
 let g:NERDTreeWinPos = "left"
 nmap <Leader>f :NERDTreeToggle<CR>  " File explorer
 nmap <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
+
 
 "=====================================================
 "" NERDCommenter settings
