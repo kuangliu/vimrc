@@ -46,7 +46,7 @@ call plug#begin('~/.vim/plugged')
     "-------------------=== Languages support ===-------------------
     Plug 'tpope/vim-commentary'               " Comment stuff out
     Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
     Plug 'terryma/vim-multiple-cursors'
 
     "-------------------=== Python  ===-----------------------------
