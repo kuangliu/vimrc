@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'easymotion/vim-easymotion'
     Plug 'rhysd/accelerated-jk'
+    Plug 'schickling/vim-bufonly'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -184,7 +185,8 @@ vmap <Leader>y "+y
 " 切换 buffer
 nnoremap ]b :bn<CR>
 nnoremap [b :bp<CR>
-nnoremap qb :<c-u>bp <bar> bd #<cr>     " quit current buffer
+nnoremap <Leader>bw :<c-u>bp <bar> bd #<CR>    " quit current buffer
+nnoremap <Leader>bo :Bonly<CR>                 " only contain current buffer
 
 "=====================================================
 "" Ctags settings
@@ -288,7 +290,7 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = ''
