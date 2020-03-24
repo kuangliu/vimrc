@@ -35,7 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'     " Themes for airline
     Plug 'Lokaltog/powerline'                 " {'rtp': 'powerline/bindings/vim/'}   Powerline fonts plugin
     Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
-    Plug 'morhetz/gruvbox'
+    Plug 'joshdick/onedark.vim'
 
     "-------------------=== Snippets support ===--------------------
     Plug 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
@@ -116,7 +116,7 @@ set secure                                  " prohibit .vimrc files to execute s
 syntax enable
 set t_Co=256
 
-colorscheme gruvbox
+colorscheme onedark
 set background=dark
 if (empty($TMUX))
   if (has("nvim"))
@@ -260,8 +260,7 @@ set matchtime=2                                                   " show matchin
 "=====================================================
 "" AirLine settings
 "=====================================================
-" let g:airline_theme='badwolf'
-let g:airline_theme='gruvbox'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
