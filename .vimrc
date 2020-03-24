@@ -28,6 +28,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'rhysd/accelerated-jk'
     Plug 'schickling/vim-bufonly'
+    Plug 'octol/vim-cpp-enhanced-highlight'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -238,7 +239,6 @@ set switchbuf=useopen
 set laststatus=2
 nmap <F9> :bprev<CR>
 nmap <F10> :bnext<CR>
-"nmap <silent> <Leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 
 "=====================================================
 "" Search settings
