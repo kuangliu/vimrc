@@ -249,7 +249,10 @@ set hlsearch	                            " highlight search results
 set ignorecase
 set smartcase
 
-set nofoldenable                                                  " disable folding"
+" set nofoldenable                                                " disable folding
+set foldenable
+set foldmethod=indent
+set foldlevelstart=99                                             " do not fold on launch
 set confirm                                                       " prompt when existing from an unsaved file
 set backspace=indent,eol,start                                    " More powerful backspacing
 set title                                                         " show file in titlebar
