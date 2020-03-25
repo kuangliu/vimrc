@@ -131,9 +131,6 @@ if (empty($TMUX))
   endif
 endif
 
-"syntax on
-"colorscheme onedark
-
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
@@ -141,6 +138,10 @@ set cursorline cursorcolumn
 
 " Set leaderkey to space
 let mapleader=" "
+
+" Map 1 to start of line, 2 to end of line
+nmap 1 ^
+nmap 2 $
 
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
@@ -255,7 +256,7 @@ set title                                                         " show file in
 set laststatus=2                                                  " use 2 lines for the status bar
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
 
-" set guifont=Menlo\ Regular:h18
+" set guifont=SF\ Mono\ Regular:h18
 
 "=====================================================
 "" AirLine settings
@@ -346,7 +347,6 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
 let g:NERDTreeWinPos = "left"
 nmap <Leader>f :NERDTreeToggle<CR>  " File explorer
 nmap <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
-
 
 "=====================================================
 "" NERDCommenter settings
