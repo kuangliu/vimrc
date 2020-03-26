@@ -139,10 +139,6 @@ set cursorline cursorcolumn
 " Set leaderkey to space
 let mapleader=" "
 
-" Map 1 to start of line, 2 to end of line
-nmap 1 ^
-nmap 2 $
-
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
 "inoremap jk <Esc>
