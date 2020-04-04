@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rhysd/accelerated-jk'
     Plug 'schickling/vim-bufonly'
     Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'unblevable/quick-scope'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -160,6 +161,13 @@ nnoremap <Leader>rg :Rg<CR>
 "" Easymotion settings
 "=====================================================
 nmap s <Plug>(easymotion-s2)
+
+
+"=====================================================
+"" QuickScope settings
+"=====================================================
+" Trigger a highlight only when pressing f and F.
+let g:qs_highlight_on_keys = ['f', 'F']
 
 "=====================================================
 "" NeoVim terminal settings
