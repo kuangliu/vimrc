@@ -137,6 +137,10 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
+" map ctrl-s to save
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+
 " Set leaderkey to space
 let mapleader=" "
 
