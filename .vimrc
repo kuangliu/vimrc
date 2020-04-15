@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'schickling/vim-bufonly'
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'unblevable/quick-scope'
+    Plug 'romainl/vim-cool'                   " Clear search highlight 
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -117,6 +118,10 @@ set secure                                  " prohibit .vimrc files to execute s
 syntax enable
 set t_Co=256
 
+" map ctrl-s to save
+nmap <c-s> :w<cr>
+imap <c-s> <esc>:w<cr>a
+
 colorscheme onedark
 set background=dark
 if (empty($TMUX))
@@ -136,10 +141,6 @@ endif
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
-
-" map ctrl-s to save
-nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
 
 " Set leaderkey to space
 let mapleader=" "
@@ -165,7 +166,6 @@ nnoremap <Leader>rg :Rg<CR>
 "" Easymotion settings
 "=====================================================
 nmap s <Plug>(easymotion-s2)
-
 
 "=====================================================
 "" QuickScope settings
@@ -267,7 +267,7 @@ set title                                                         " show file in
 set laststatus=2                                                  " use 2 lines for the status bar
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
 
-" set guifont=SF\ Mono\ Regular:h18
+set guifont=SF\ Mono\ Regular:h18
 
 "=====================================================
 "" AirLine settings
@@ -405,7 +405,7 @@ augroup autoformat_settings
     " autocmd FileType html,css,json AutoFormatBuffer js-beautify
     " autocmd FileType java AutoFormatBuffer google-java-format
     " autocmd FileType python AutoFormatBuffer yapf
-    " autocmd FileType python AutoFormatBuffer autopep8
+    autocmd FileType python AutoFormatBuffer autopep8
     " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
