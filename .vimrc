@@ -55,7 +55,7 @@ call plug#begin('~/.vim/plugged')
 
     "-------------------=== Python  ===-----------------------------
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-    " Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+    Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 
     "-------------------=== Code Format ===------------------------
     Plug 'google/vim-maktaba'
@@ -148,6 +148,11 @@ let mapleader=" "
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
 "inoremap jk <Esc>
+
+"=====================================================
+"" Pymode settings
+"=====================================================
+let g:pymode_lint = 0
 
 "=====================================================
 "" Accelerated-jk settings
