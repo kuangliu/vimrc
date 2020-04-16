@@ -55,7 +55,7 @@ call plug#begin('~/.vim/plugged')
 
     "-------------------=== Python  ===-----------------------------
     Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-    Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+    " Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 
     "-------------------=== Code Format ===------------------------
     Plug 'google/vim-maktaba'
