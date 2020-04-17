@@ -145,6 +145,8 @@ set cursorline cursorcolumn
 " Set leaderkey to space
 let mapleader=" "
 
+nmap <F5> :!python % <CR>
+
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
 "inoremap jk <Esc>
