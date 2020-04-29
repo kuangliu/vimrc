@@ -142,6 +142,10 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
+" Move current line up and down
+nmap <c-k> :move -2<cr>  " move up
+nmap <c-j> :move +1<cr>  " move down
+
 " Set leaderkey to space
 let mapleader=" "
 
