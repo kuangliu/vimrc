@@ -151,7 +151,6 @@ let mapleader=" "
 
 " Run current python file
 nmap <F5> :!python % <CR>
-nmap <c-r> :!python % <CR>
 
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
