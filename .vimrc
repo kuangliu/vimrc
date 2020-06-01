@@ -71,8 +71,9 @@ call glaive#Install()
 
 " Optional: Enable codefmt's default mappings on the <Leader>= prefix.
 Glaive codefmt plugin[mappings]
-"Glaive codefmt clang_format_executable='clang-format'
 Glaive codefmt clang_format_style='Chromium'
+" Glaive codefmt clang_format_style=file
+" Glaive codefmt clang_format_style='Google'
 
 filetype on
 filetype plugin on
@@ -363,8 +364,8 @@ let NERDTreeDirArrows = 1
 " 过滤: 所有指定文件和文件夹不显示
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']  
 let g:NERDTreeWinPos = "left"
-nmap <Leader>f :NERDTreeToggle<CR>  " File explorer
-nmap <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
+nmap <silent> <Leader>f :NERDTreeToggle<CR>  " File explorer
+nmap <silent> <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
 
 "=====================================================
 "" NERDCommenter settings
@@ -399,8 +400,14 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
+"=====================================================
+"" General settings
+"=====================================================
 " Git Fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+
+nmap gs :G<CR>
+nmap gc :Gcommit<CR>
 
 " Google FMT
 augroup autoformat_settings
