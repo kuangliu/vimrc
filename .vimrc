@@ -199,6 +199,9 @@ nmap <Leader>th :vertical resize +5<CR>
 nmap <Leader>tl :vertical resize -5<CR>
 vmap <Leader>y "+y
 
+" Replace the word under cursor.
+nnoremap <Leader>r :%s/\<<c-r><c-w>\>//g<left><left>
+
 " 切换 buffer
 nnoremap ]b :bn<CR>
 nnoremap [b :bp<CR>
