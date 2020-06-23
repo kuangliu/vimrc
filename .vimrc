@@ -191,13 +191,7 @@ nmap <silent> <Leader>j :wincmd j<CR>
 nmap <silent> <Leader>k :wincmd k<CR>
 nmap <silent> <Leader>l :wincmd l<CR>
 
-set splitbelow
-set splitright
 nmap <Leader>q :q!<CR>
-nmap <Leader>tr :vsplit term://zsh<CR>  " terminal right
-nmap <Leader>tb :split term://zsh<CR>   " terminal below
-nmap <Leader>th :vertical resize +5<CR>
-nmap <Leader>tl :vertical resize -5<CR>
 vmap <Leader>y "+y
 
 " Replace the word under cursor.
@@ -359,18 +353,16 @@ let g:multi_cursor_quit_key            = '<Esc>'
 "=====================================================
 "" Floaterm settings
 "=====================================================
-let g:floaterm_keymap_toggle = '<F1>'
-let g:floaterm_keymap_next   = '<F2>'
-let g:floaterm_keymap_prev   = '<F3>'
-let g:floaterm_keymap_new    = '<F4>'
-
-" Floaterm
 let g:floaterm_gitcommit='floaterm'
 let g:floaterm_autoinsert=1
 let g:floaterm_width=0.8
 let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
+
+nnoremap <silent> <Leader>tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=normal<CR>
+nnoremap <silent> <Leader>tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
+nnoremap <silent> <Leader>tt :FloatermToggle<CR>
 
 "=====================================================
 "" General settings
