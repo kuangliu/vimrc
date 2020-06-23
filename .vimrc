@@ -21,7 +21,6 @@ set nocompatible
 "=====================================================
 call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
-    Plug 'preservim/nerdtree'                " Project and file navigation
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
@@ -207,14 +206,6 @@ nnoremap <Leader>bw :<c-u>bp <bar> bd #<CR>    " quit current buffer
 nnoremap <Leader>bo :Bonly<CR>                 " only contain current buffer
 
 "=====================================================
-"" Ctags settings
-"=====================================================
-"nmap <Leader>gd <C-]><CR>
-"nmap <Leader>ts :ts<CR>
-"nmap <Leader>tn :tn<CR>
-"nmap <Leader>tp :tp<CR>
-
-"=====================================================
 "" Coc settings
 "=====================================================
 " Use tab for trigger completion with characters ahead and navigate.
@@ -319,53 +310,14 @@ let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 "=====================================================
-"" Powerline terminal settings
+"" coc-explorer settings
 "=====================================================
-" set guifont=Inconsolata\ for\ Powerline:h15
-" " set guifont=Source\ Code\ Pro\ for\ Powerline:h15
-" let g:Powerline_symbols = 'fancy'
-" set encoding=utf-8
-" set t_Co=256
-" set fillchars+=stl:\ ,stlnc:\
-" "set term=xterm-256color
-" set termencoding=utf-8
-"
-" if has("gui_running")
-"     let s:uname = system("uname")
-"     if s:uname == "Darwin\n"
-"         set guifont=Source\ Code\ Pro\ for\ Powerline:h15
-"         colorscheme PaperColor              " set color scheme
-"     endif
-" endif
-
-"=====================================================
-"" NERDTree settings
-"=====================================================
-let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
-let NERDTreeWinSize=40
-autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
+" 打开vim时如果没有文件自动打开explorer
+autocmd VimEnter * if !argc() | call execute('CocCommand explorer') | endif  " Load file explorer only if vim is run without arguments
 autocmd VimEnter * wincmd p
-" let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
-" 开启/关闭nerdtree快捷键
-" map <C-t> :NERDTreeToggle<CR>
-" let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
-" 打开vim时如果没有文件自动打开NERDTree
-"当NERDTree为剩下的唯一窗口时自动关闭
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-""设置树的显示图标
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
-let g:NERDTreeShowLineNumbers=1  " 是否显示行号
-let g:NERDTreeHidden=0     "不显示隐藏文件
-""Making it prettier
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-" 过滤: 所有指定文件和文件夹不显示
-let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']  
-let g:NERDTreeWinPos = "left"
-nmap <silent> <Leader>f :NERDTreeToggle<CR>  " File explorer
-nmap <silent> <Leader>nf :NERDTreeFind<CR>   " Nerdtree Find
+"当explorer为剩下的唯一窗口时自动关闭
+autocmd bufenter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+nmap <silent> <Leader>f :CocCommand explorer<CR>  " File explorer
 
 "=====================================================
 "" NERDCommenter settings
