@@ -366,7 +366,7 @@ nnoremap <silent> <Leader>tr :FloatermNew --position=right --height=1 --width=0.
 nnoremap <silent> <Leader>tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
 
 nnoremap <silent> <Leader>lg :FloatermNew lazygit<CR>
-nnoremap <silent> <Leader>du :FloatermNew nudu<CR>
+nnoremap <silent> <Leader>du :FloatermNew ncdu<CR>
 
 "=====================================================
 "" General settings
