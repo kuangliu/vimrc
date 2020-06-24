@@ -360,9 +360,13 @@ let g:floaterm_height=0.8
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
 
+nnoremap <silent> <Leader>tf :FloatermNew<CR>
+nnoremap <silent> <Leader>tt :FloatermToggle<CR>
 nnoremap <silent> <Leader>tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=normal<CR>
 nnoremap <silent> <Leader>tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
-nnoremap <silent> <Leader>tt :FloatermToggle<CR>
+
+nnoremap <silent> <Leader>lg :FloatermNew lazygit<CR>
+nnoremap <silent> <Leader>du :FloatermNew nudu<CR>
 
 "=====================================================
 "" General settings
