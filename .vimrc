@@ -368,6 +368,8 @@ nnoremap <silent> <Leader>tt :FloatermToggle<CR>
 "" General settings
 "=====================================================
 " Git Fugitive
+set splitbelow
+set splitright
 autocmd QuickFixCmdPost *grep* cwindow
 
 nmap gs :G<CR>
