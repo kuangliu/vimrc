@@ -191,7 +191,7 @@ nmap <silent> <Leader>j :wincmd j<CR>
 nmap <silent> <Leader>k :wincmd k<CR>
 nmap <silent> <Leader>l :wincmd l<CR>
 
-nmap <Leader>q :q!<CR>
+nmap <Leader>q :exit<CR>
 vmap <Leader>y "+y
 
 " Replace the word under cursor.
