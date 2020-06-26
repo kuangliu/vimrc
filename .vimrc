@@ -376,9 +376,6 @@ set splitbelow
 set splitright
 autocmd QuickFixCmdPost *grep* cwindow
 
-nmap gs :G<CR>
-nmap gc :Gcommit<CR>
-
 " Google FMT
 augroup autoformat_settings
     " autocmd FileType bzl AutoFormatBuffer buildifier
