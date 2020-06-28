@@ -191,8 +191,8 @@ nmap <silent> <Leader>j :wincmd j<CR>
 nmap <silent> <Leader>k :wincmd k<CR>
 nmap <silent> <Leader>l :wincmd l<CR>
 
-nmap <Leader>q :exit<CR>
-vmap <Leader>y "+y
+nmap <silent> <Leader>q :exit<CR>
+vmap <silent> <Leader>y "+y
 
 " Replace the word under cursor.
 nnoremap <Leader>r :%s/\<<c-r><c-w>\>//g<left><left>
