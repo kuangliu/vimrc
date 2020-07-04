@@ -157,6 +157,11 @@ nmap <F5> :!python % <CR>
 "inoremap jk <Esc>
 
 "=====================================================
+"" Startify settings
+"=====================================================
+let g:startify_change_to_dir=0
+
+"=====================================================
 "" Accelerated-jk settings
 "=====================================================
 nmap <silent> j <Plug>(accelerated_jk_gj)
