@@ -23,7 +23,6 @@ call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'tpope/vim-fugitive'
     Plug 'easymotion/vim-easymotion'
     Plug 'rhysd/accelerated-jk'
     Plug 'schickling/vim-bufonly'
@@ -371,7 +370,6 @@ nnoremap <silent> <Leader>du :FloatermNew ncdu<CR>
 "=====================================================
 "" General settings
 "=====================================================
-" Git Fugitive
 set splitbelow
 set splitright
 autocmd QuickFixCmdPost *grep* cwindow
