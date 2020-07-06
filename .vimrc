@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'unblevable/quick-scope'
     Plug 'romainl/vim-cool'                   " Clear search highlight 
     Plug 'voldikss/vim-floaterm'
+    Plug 'tpope/vim-fugitive'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
