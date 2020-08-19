@@ -147,6 +147,9 @@ set cursorline cursorcolumn
 nmap <c-k> :move -2<cr>  " move up
 nmap <c-j> :move +1<cr>  " move down
 
+" Fix indenting visual block
+vmap < <gv
+vmap > >gv
 " Set leaderkey to space
 let mapleader=" "
 
