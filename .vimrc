@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'unblevable/quick-scope'
     Plug 'romainl/vim-cool'                   " Clear search highlight 
     Plug 'voldikss/vim-floaterm'
+    Plug 'tpope/vim-fugitive'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -146,6 +147,9 @@ set cursorline cursorcolumn
 nmap <c-k> :move -2<cr>  " move up
 nmap <c-j> :move +1<cr>  " move down
 
+" Fix indenting visual block
+vmap < <gv
+vmap > >gv
 " Set leaderkey to space
 let mapleader=" "
 
