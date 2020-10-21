@@ -173,6 +173,7 @@ nmap <silent> k <Plug>(accelerated_jk_gk)
 " nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 nnoremap <c-p> :Files<CR>
 nnoremap <Leader>rg :Rg<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
 "=====================================================
 "" Easymotion settings
