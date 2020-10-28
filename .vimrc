@@ -30,7 +30,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'unblevable/quick-scope'
     Plug 'romainl/vim-cool'                   " Clear search highlight 
     Plug 'voldikss/vim-floaterm'
-    Plug 'tpope/vim-fugitive'
 
     "-------------------=== Other ===-------------------------------
     Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -368,6 +367,7 @@ let g:floaterm_width=0.9
 let g:floaterm_height=0.9
 let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
+let g:floaterm_shell='zsh'
 
 nnoremap <silent> <Leader>tf :FloatermNew<CR>
 nnoremap <silent> <Leader>tt :FloatermToggle<CR>
