@@ -139,17 +139,14 @@ au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
 " Map 1 to save
-nmap 1 :w<cr>
-
-" Map 2 to run current python file
-nmap 2 :!python % <CR>
+nmap <silent> 1 :w<CR>
 
 " Map q to quit
-nmap q :exit<CR>
+nmap <silent> q :exit<CR>
 
 " Move current line up and down
-nmap <c-k> :move -2<cr>  " move up
-nmap <c-j> :move +1<cr>  " move down
+nmap <silent> <c-k> :move -2<CR>  " move up
+nmap <silent> <c-j> :move +1<CR>  " move down
 
 " Fix indenting visual block
 vmap < <gv
