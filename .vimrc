@@ -118,10 +118,6 @@ set secure                                  " prohibit .vimrc files to execute s
 syntax enable
 set t_Co=256
 
-" map ctrl-s to save
-nmap <c-s> :w<cr>
-imap <c-s> <esc>:w<cr>a
-
 colorscheme onedark
 set background=dark
 if (empty($TMUX))
@@ -142,6 +138,15 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
+" Map 1 to save
+nmap 1 :w<cr>
+
+" Map 2 to run current python file
+nmap 2 :!python % <CR>
+
+" Map q to quit
+nmap q :exit<CR>
+
 " Move current line up and down
 nmap <c-k> :move -2<cr>  " move up
 nmap <c-j> :move +1<cr>  " move down
@@ -149,11 +154,9 @@ nmap <c-j> :move +1<cr>  " move down
 " Fix indenting visual block
 vmap < <gv
 vmap > >gv
+
 " Set leaderkey to space
 let mapleader=" "
-
-" Run current python file
-nmap <F5> :!python % <CR>
 
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
@@ -192,14 +195,13 @@ let g:qs_highlight_on_keys = ['f', 'F']
 "=====================================================
 "" NeoVim terminal settings
 "=====================================================
-tnoremap <Esc><Esc> <C-\><C-n>     " leave nvim terminal mode
+tnoremap <Esc> <C-\><C-n>     " leave nvim terminal mode
 
 nmap <silent> <Leader>h :wincmd h<CR>
 nmap <silent> <Leader>j :wincmd j<CR>
 nmap <silent> <Leader>k :wincmd k<CR>
 nmap <silent> <Leader>l :wincmd l<CR>
 
-nmap <silent> <Leader>q :exit<CR>
 vmap <silent> <Leader>y "+y
 
 " Replace the word under cursor.
@@ -369,13 +371,13 @@ let g:floaterm_wintitle=0
 let g:floaterm_autoclose=1
 let g:floaterm_shell='zsh'
 
-nnoremap <silent> <Leader>tf :FloatermNew<CR>
-nnoremap <silent> <Leader>tt :FloatermToggle<CR>
-nnoremap <silent> <Leader>tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=normal<CR>
-nnoremap <silent> <Leader>tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
+nnoremap <silent> tf :FloatermNew<CR>
+nnoremap <silent> tt :FloatermToggle<CR>
+nnoremap <silent> tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=normal<CR>
+nnoremap <silent> tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
 
-nnoremap <silent> <Leader>zg :FloatermNew lazygit<CR>
-nnoremap <silent> <Leader>du :FloatermNew ncdu<CR>
+nnoremap <silent> zg :FloatermNew lazygit<CR>
+nnoremap <silent> du :FloatermNew ncdu<CR>
 
 "=====================================================
 "" General settings
