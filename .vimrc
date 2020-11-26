@@ -138,8 +138,8 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 
-" Map - to save
-nmap <silent> - :w<CR>
+" Map 1 to save
+nmap <silent> 1 :w<CR>
 
 " Map q to quit
 nmap <silent> q :exit<CR>
