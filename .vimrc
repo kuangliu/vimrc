@@ -51,6 +51,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
     Plug 'preservim/nerdcommenter'
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'metakirby5/codi.vim'
 
     "-------------------=== Python  ===-----------------------------
     " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
