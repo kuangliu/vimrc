@@ -372,7 +372,7 @@ let g:floaterm_shell='zsh'
 
 nnoremap <silent> tf :FloatermNew<CR>
 nnoremap <silent> tt :FloatermToggle<CR>
-nnoremap <silent> tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=normal<CR>
+nnoremap <silent> tr :FloatermNew --position=right --height=1 --width=0.4 --wintype=vsplit<CR>
 nnoremap <silent> tb :FloatermNew --position=bottom --height=0.4 --width=1 --wintype=normal<CR>
 
 nnoremap <silent> zg :FloatermNew lazygit<CR>
