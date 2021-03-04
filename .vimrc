@@ -45,6 +45,7 @@ call plug#begin('~/.vim/plugged')
 
     "-------------------=== Coc support ===-------------------
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
     
     "-------------------=== Languages support ===-------------------
     Plug 'tpope/vim-commentary'               " Comment stuff out
@@ -402,4 +403,3 @@ augroup END
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
