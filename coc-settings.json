@@ -26,8 +26,10 @@
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
     "explorer.keyMappings.global": {
-      "i": "open:vsplit",
-      "b": "open:split"
+      "E": "open:vsplit",
+      "b": "open:split",
+      "D": "delete"
     }
 
 }
+
