@@ -142,6 +142,8 @@ set cursorline cursorcolumn
 
 " Map 1 to save
 nmap <silent> 1 :w<CR>
+" Map 2 to toggle terminal
+nmap <silent> 2 :FloatermToggle<CR>
 
 " Map q to quit
 nmap <silent> q :exit<CR>
