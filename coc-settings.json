@@ -26,10 +26,19 @@
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
     "explorer.keyMappings.global": {
-      "E": "open:vsplit",
+      "i": false,
+      "d": false,
+      "x": false,
+      "ii": false,
+      "ic": false,
+      "il": false,
+      "dd": false,
+      "dD": false,
+      "df": false,
+      "dF": false,
+      "i": "open:vsplit",
       "b": "open:split",
+      "x": "cutFile",
       "D": "delete"
     }
-
 }
-
