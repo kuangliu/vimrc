@@ -214,6 +214,9 @@ nnoremap [b :bp<CR>
 nnoremap <Leader>bw :<c-u>bp <bar> bd #<CR>    " quit current buffer
 nnoremap <Leader>bo :Bonly<CR>                 " only contain current buffer
 
+" Delete white spaces between beginning of current line and end of previous line.
+nmap <silent> <Leader>d ^hvk$d<CR>
+
 "=====================================================
 "" Coc settings
 "=====================================================
