@@ -209,6 +209,7 @@ vmap <silent> <Leader>y "+y
 nnoremap <Leader>r :%s/\<<c-r><c-w>\>//g<left><left>
 
 " 切换 buffer
+nmap <TAB> :bn<CR>
 nnoremap ]b :bn<CR>
 nnoremap [b :bp<CR>
 nnoremap <Leader>bw :<c-u>bp <bar> bd #<CR>    " quit current buffer
