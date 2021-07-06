@@ -45,7 +45,6 @@ call plug#begin('~/.vim/plugged')
 
     "-------------------=== Coc support ===-------------------
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
     
     "-------------------=== Languages support ===-------------------
     Plug 'tpope/vim-commentary'               " Comment stuff out
