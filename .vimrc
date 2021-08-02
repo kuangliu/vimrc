@@ -60,7 +60,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'google/vim-maktaba'
     Plug 'google/vim-codefmt'
     " Also add Glaive, which is used to configure codefmt's maktaba flags. See
-    " " `:help :Glaive` for usage.
+    " `:help :Glaive` for usage.
     Plug 'google/vim-glaive'
 
     Plug 'mhinz/vim-startify'
@@ -147,7 +147,6 @@ nmap <silent> 2 :FloatermToggle<CR>
 " Map dk to delete-from-cursor-to-end-of-previsou-line
 nmap <silent> dk vk$d<CR>
 
-
 " Map q to quit
 nmap <silent> q :exit<CR>
 
@@ -159,14 +158,9 @@ nmap <silent> <c-j> :move +1<CR>  " move down
 vmap < <gv
 vmap > >gv
 
-
 " Set leaderkey to space
 let mapleader=" "
 nmap <silent> <Leader>d ^hvk$d<CR>
-
-" Additional mappings for Esc (useful for MacBook with touch bar)
-"inoremap jj <Esc>
-"inoremap jk <Esc>
 
 "=====================================================
 "" Startify settings
