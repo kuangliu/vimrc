@@ -21,8 +21,6 @@ set nocompatible
 "=====================================================
 call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
     Plug 'easymotion/vim-easymotion'
     Plug 'rhysd/accelerated-jk'
     Plug 'schickling/vim-bufonly'
@@ -42,6 +40,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
     Plug 'tomtom/tlib_vim'                    " dependencies #2
     Plug 'honza/vim-snippets'                 " snippets repo
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
     "-------------------=== Coc support ===-------------------
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -51,11 +50,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
     Plug 'preservim/nerdcommenter'
     Plug 'terryma/vim-multiple-cursors'
-    Plug 'metakirby5/codi.vim'
 
-    "-------------------=== Python  ===-----------------------------
-    " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-    " Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+    "-------------------=== Telescope ===-------------------
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 
     "-------------------=== Code Format ===------------------------
     Plug 'google/vim-maktaba'
@@ -141,8 +140,13 @@ set cursorline cursorcolumn
 
 " Map 1 to save
 nmap <silent> 1 :w<CR>
+
 " Map 2 to toggle terminal
 nmap <silent> 2 :FloatermToggle<CR>
+
+" Map dk to delete-from-cursor-to-end-of-previsou-line
+nmap <silent> dk vk$d<CR>
+
 
 " Map q to quit
 nmap <silent> q :exit<CR>
@@ -155,8 +159,10 @@ nmap <silent> <c-j> :move +1<CR>  " move down
 vmap < <gv
 vmap > >gv
 
+
 " Set leaderkey to space
 let mapleader=" "
+nmap <silent> <Leader>d ^hvk$d<CR>
 
 " Additional mappings for Esc (useful for MacBook with touch bar)
 "inoremap jj <Esc>
@@ -174,12 +180,12 @@ nmap <silent> j <Plug>(accelerated_jk_gj)
 nmap <silent> k <Plug>(accelerated_jk_gk)
 
 "=====================================================
-"" FZF settings
+"" Telescope settings
 "=====================================================
-" nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
-nnoremap <c-p> :Files<CR>
-nnoremap <Leader>rg :Rg<CR>
-let g:fzf_layout = { 'down': '~40%' }
+nnoremap <c-f> :Telescope find_files<CR>
+nnoremap <c-g> :Telescope live_grep<CR>
+" nnoremap <Leader>tb :Telescope buffers<CR>
+" nnoremap <Leader>th :Telescope help_tags<CR>
 
 "=====================================================
 "" Easymotion settings
@@ -213,9 +219,6 @@ nnoremap ]b :bn<CR>
 nnoremap [b :bp<CR>
 nnoremap <Leader>bw :<c-u>bp <bar> bd #<CR>    " quit current buffer
 nnoremap <Leader>bo :Bonly<CR>                 " only contain current buffer
-
-" Delete white spaces between beginning of current line and end of previous line.
-nmap <silent> <Leader>d ^hvk$d<CR>
 
 "=====================================================
 "" Coc settings
