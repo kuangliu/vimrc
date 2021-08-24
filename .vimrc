@@ -318,15 +318,16 @@ let g:airline_symbols.spell = ''
 let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+
 "=====================================================
 "" coc-explorer settings
 "=====================================================
 " 打开vim时如果没有文件自动打开explorer
-autocmd VimEnter * if !argc() | call execute('CocCommand explorer') | endif  " Load file explorer only if vim is run without arguments
+autocmd VimEnter * if !argc() | call execute('CocCommand explorer --sources=file+') | endif  " Load file explorer only if vim is run without arguments
 autocmd VimEnter * wincmd p
 "当explorer为剩下的唯一窗口时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <silent> <Leader>f :CocCommand explorer<CR>  " File explorer
+nmap <silent> <Leader>f :CocCommand explorer --sources=file+<CR>  " File explorer
 
 "=====================================================
 "" NERDCommenter settings
